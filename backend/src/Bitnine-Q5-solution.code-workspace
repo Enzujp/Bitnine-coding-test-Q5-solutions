@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Bitnine-Q5-solution",
+			"path": "../.."
+		},
+		{
+			"name": "frontend",
+			"path": "../../../Bitnine-coding-test-Q5/frontend"
+		}
+	],
+	"settings": {}
+}
