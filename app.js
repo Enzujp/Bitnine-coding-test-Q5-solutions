@@ -1,41 +1,43 @@
-const express = require("express");
-// const bodyParser = require("bodyParser");
-// const morgan = require("morgan");
-const mongoose = require("mongoose");
-
+const express = require('express');
 const app = express();
 
-//Connect to MongoDB
-const dbURI = 'mongodb+srv://enzu:jessedavid@cluster0.yjojpvv.mongodb.net/'
-mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology:true })
- .then((result) => app.listen(3000))
- .catch((err) => console.log(err));
+const { render } = require('ejs');
+const mongoose = require('mongoose');
+const path = require("path");
+const templatePath = path.join(__dirname, '../templates');
+const collection = require("./mongodb");
 
-const port = 3000; //The server would run on this port
+app.set("view engine", "ejs");
 
-//Initializing Server
-app.listen(port, () => console.log(`This app runs on port ${port}.`))
 
-// app.use(bodyParser.urlencoded({extended:false}));
+app.listen(3000, ()=> {
+    console.log("Server now running on port 3000")
+});
 
-//Homepage Route
-app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/static/index.html');
+
+app.get('/', (req, res) => {
+    res.render('index.ejs');
 })
 
-//Route to the signup page
-app.get('/signup', function(req, res) {
-    res.sendFile(__dirname + '/static/signup.html')
+app.get('/signup', (req,res)=> {
+    res.render('signup');
 })
 
-//Route to Login page
-app.get('/login', function(req, res) {
-    res.sendFile(__dirname + '/static/login.html')
+app.post('/signup', async(req,res)=> {
+    const data = {
+        name: req.body.name,
+        password: req.body.password
+    }
+
+    await collection.insertMany([data]);
+
+    res.render("index")
 })
 
+app.post('/login', async (req, res) => {
+    res.render('login')
+})
 
-app.post('/login', function(req, res) {
-    let username = req.body.username;
-    let password = req.body.password;
-    res.send(`Username: ${username} Password: ${password}`);
+app.get('/login', (req, res)=> {
+    res.render('login.ejs');
 })
