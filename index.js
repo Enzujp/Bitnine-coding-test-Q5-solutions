@@ -20,10 +20,10 @@ mongoose.connect(dbURL)
     .catch((err) => console.log(err));
 // register view engine 
 
-// app.set("view engine", "ejs");
-// app.use(express.urlencoded({extended:true}));
+app.set("view engine", "ejs");
+app.use(express.urlencoded({extended:true}));
 
-// app.use(flash);
+app.use(flash);
 
 
 
