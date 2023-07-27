@@ -14,7 +14,7 @@ const { request } = require('http');
 //connect to mongodb
 const dbURL = "mongodb+srv://johnpaul:jessedavid@cluster0.0bakznq.mongodb.net//";
 mongoose.connect(dbURL)
-    .then(() => app.listen(3000), () => {
+    .then(() => app.listen(8000), () => {
         console.log("everything works!")    
     })
     .catch((err) => console.log(err));
@@ -23,7 +23,7 @@ mongoose.connect(dbURL)
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended:true}));
 
-app.use(flash);
+app.use(flash());
 
 
 
