@@ -144,7 +144,7 @@ a:hover {
 .floating-btns {
     border: 1px solid rgb(138, 201, 175);
     border-radius: 15px;
-    padding: 40px;
+    padding: 65px;
     color:  rgb(138, 201, 175);
     margin-bottom: 10px;
     width: 80%;
@@ -172,7 +172,7 @@ a:hover {
 
 .sixth-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 50px;
     margin-top: 40px;
 }
@@ -226,6 +226,7 @@ a:hover {
     margin-bottom: 40px;
     padding: 70px;
 }
+
 
 .trim-para {
     width: 30%;
