@@ -1,0 +1,269 @@
+body {
+    color: #40514e;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    /* margin: 0 40px 0; */
+    
+}
+
+p {
+    line-height: 2;
+}
+
+hr {
+    border: dotted #EAF6F6 6px; 
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
+
+h1 {
+    color: grey;
+    font-family: 'Sacramento', cursive;
+    font-size: 4.8rem;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;    
+}
+
+h2 {
+    color: grey;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: rgb(158, 155, 155);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+a {
+    color: black;
+    /* font-family: 'Montserrat', sans-serif; */
+    text-decoration: none;
+}
+
+a:hover {
+    color: bisque;
+
+}
+
+.btn {
+    background-color: rgb(140, 140, 214);
+    color: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+.nav-btn {
+    background-color: rgb(140, 140, 214);
+    color: white;
+    padding: 10px;
+}
+.logo{
+    position: relative;
+    right: 500px;
+}
+
+
+
+.navigation {
+    background-color: #DBDFEA;
+    display: flex;
+    justify-content: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+   
+}
+
+.nav-span {
+    display: inline-flex;
+    gap: 50px;
+    margin-right: 40px;
+    width: 100%;
+    
+
+}
+
+
+.first-nav-child-ul{
+    display: flex;
+    gap: 5px;
+    list-style-type:none;
+    margin-right: 10px;
+}
+
+.under-nav-container {
+    display: flex;
+    gap: 5px;
+}
+
+
+.main-events {
+    background-color: white;
+    display: flex;
+    list-style-type: none;
+    gap: 5px;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    position: fixed;
+    padding-bottom: 30px;
+    width: 100%;    
+}
+
+.agens-sql {
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    width: 50%;
+    
+}
+
+.cbb-buttons {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.dropdown-btn {
+    background-color: rgb(204, 194, 194);
+    border-radius: 5px;
+    color: black;
+    font-family: sans-serif;
+    left: 200px;
+    position: relative;
+    top: 0;
+    padding: 10px;
+    box-shadow: 2px #DBDFEA;
+}
+
+.floating-btns {
+    border: 1px solid rgb(138, 201, 175);
+    border-radius: 15px;
+    padding: 40px;
+    color:  rgb(138, 201, 175);
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.second-container {
+    background-color: #DBDFEA;
+    text-align: center;
+}
+
+.third-container {
+    text-align: center;
+}
+
+.fourth-container {
+    background-color: #DBDFEA;
+    margin: 40px 0;
+}
+
+.fifth-container {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+
+.sixth-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.products, .resources, .company {
+    list-style-type: none;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+.products {
+    margin-left: 10px;
+}
+
+.hot-boxes {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 15%;
+    /* padding: 10px; */
+    width: 30%;
+    line-height: 1;
+}
+
+.salmon {
+    color: salmon;
+}
+
+.aquamarine {
+    color: rgb(134, 164, 184);
+}
+
+.strange-circles {
+    background-color: white;
+    border: 1px dotted black;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 40px;
+   
+}
+
+.info-boxes {
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(218, 205, 205);
+    color: rgb(54, 62, 70);
+    display: inline-block;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 40px;
+    padding: 70px;
+}
+
+.trim-para {
+    width: 30%;
+    margin: auto;
+}
+
+.section-container {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+.agens-enterprise-manager {
+    margin-left: 50px;
+}
+
+.sixth-container, .footer-container{
+    padding-bottom: 20px;
+    list-style-type: none;
+    
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: end;
+}
+
+.footer-social-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    margin-top: -40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+}
+
+.copyright {
+    margin-left: 100px;
+}
+

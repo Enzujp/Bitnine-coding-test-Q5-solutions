@@ -14,8 +14,8 @@ const { request } = require('http');
 //connect to mongodb
 const dbURL = "mongodb+srv://johnpaul:jessedavid@cluster0.0bakznq.mongodb.net//";
 mongoose.connect(dbURL)
-    .then(() => app.listen(8000), () => {
-        console.log("everything works!")    
+    .then(() => app.listen(3000), () => {
+        console.log("This app run on port 3000!")    
     })
     .catch((err) => console.log(err));
 // register view engine 
@@ -28,7 +28,7 @@ app.use(flash());
 
 
 app.get('/', (req, res) => {
-    res.send('index');
+    res.render('index');
 })
 
 app.get('/signup', (req,res)=> {
@@ -55,10 +55,11 @@ app.post('/login', async (req, res) => {
         })
 
         if (checkDetails.password === req.body.password) {
-            res.render(index);
+            res.render('authindex');
         }
         else {
             res.send("Incorrect Password");
+            res.redirect("index")
         }
     }
     catch {
@@ -68,5 +69,5 @@ app.post('/login', async (req, res) => {
 })
 
 app.get('/login', (req, res)=> {
-    res.render('login.ejs');
+    res.render('login');
 })
